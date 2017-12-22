@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script> -->
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script> 
+<!-- <script src="script/angular.min.js"></script> -->
+<script src="script/restEmp.js"></script>
+ <!-- <link  href="css/style.css" rel="stylesheet" />  -->
+</head>
+<body ng-controller="myController">
+ <div >
+     <table>
+      	<thead>
+      	 <tr>
+      	   <th>EmployeeId</th>
+      	   <th>EmployeeName</th> 
+      	   <th>Employee Salary</th> 
+      	   <th>City</th> 
+      	   
+      	 </tr>
+      	</thead>
+      	<tbody>
+      	  <tr ng-repeat="employee in employees"> 
+      	   	
+    	    <td>{{ employee.employeeId }}</td>
+    	    <td>{{ employee.employeeName }}</td>
+      	    <td>{{ employee.employeeSalary }}</td>
+      	    <td>{{ employee.city }}</td>
+      	   
+      	  
+      	  </tr>
+      	</tbody>
+     </table>
+  
+ </div>
+
+</body>
+</html>
