@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="readableSyntaxModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="script/angular.min.js"></script>
+<script type="text/javascript" src="script/readableCntlSyntax.js"></script>
+</head>
+<body>
+
+   <div ng-controller="countryController as countryCntl">
+      {{ countryCntl.name }}
+	      <div ng-controller="stateController as stateCntl">
+	      	    {{ countryCntl.name }} - {{ stateCntl.name }}
+			       <div ng-controller="cityController as cityCntl">
+			     		 {{ countryCntl.name }} -{{ stateCntl.name }} - {{ cityCntl.name }}
+   				  </div>
+   
+  		 </div>
+   
+   </div>
+
+</body>
+</html>

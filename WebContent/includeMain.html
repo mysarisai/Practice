@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+ --><script src="script/angular.min.js"></script>
+  <script type="text/javascript" src="script/includeEmployeeList.js"></script>
+
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body ng-app="includeModule">
+	<div ng-controller="includeController">
+	  select View :<select ng-model="employeeview">
+	    				<option value="includeEmployeetable.html">Table</option>
+	    				<option value="includeEmployeeList.html">List</option>
+	  				</select>
+	
+	 <div ng-include="employeeview"></div>
+ 
+	
+	</div>
+
+</body>
+</html>

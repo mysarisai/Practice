@@ -1,0 +1,57 @@
+
+<html ng-app="routerEx">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <base href="/AngWithRS/" /> 
+<link href="css/style.css" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.min.js"></script>  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+<!-- <script type="text/javascript" src=script/routerInst.js></script>
+ -->
+ <script type="text/javascript"  src="script/uirouter.js"></script>
+ <script type="text/javascript" src=script/homeController.js></script>
+ 
+<title>client</title>
+</head>
+<body>
+
+   <table style="font-family:Arial">
+   
+    <tr>
+       <td colspan="2" class="header">
+         <h1>CLAR INSTITUTIONS</h1>
+       </td>
+    </tr>
+    
+    <tr>
+       <td class="leftMenu">
+       <!--  <a href="home">Home</a> 
+        <a href="courses">Courses</a> 
+        <a href="students">Students</a>  -->
+        
+         <a ui-sref="home">Home</a> 
+        <a ui-sref="courses">Courses</a> 
+        <a ui-sref="students">Students</a> 
+         
+       </td>
+    
+    
+   
+     <td class="mainContent">
+       <!-- <ng-view></ng-view> -->
+       <ui-view></ui-view>
+         
+       </td>
+  </tr>
+    
+    <tr>
+       <td colspan="2" class="footer">
+        <b>clar.Technologies@clar.com</b>
+      </td>
+    </tr>
+   </table>
+
+</body>
+</html>

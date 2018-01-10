@@ -1,0 +1,28 @@
+<h1>Students Search Details</h1>
+
+<table border="1" style="border-collapse: collapse;">
+
+   <thead>
+   <tr>
+      <th>Student ID</th>
+      <th>Student Name</th>
+      <th>Gender</th>
+      <th>City</th>
+      <th>EDIT/DELTE</th>
+      </tr>
+      
+   </thead>
+   
+    <tbody>
+       <tr ng-repeat="student in studentSearchCntl.students">
+          <td> {{ student.studentId}}</td>
+          <td> {{ student.studentName}}</td>
+          <td> {{ student.gender}}</td>
+          <td> {{ student.city}}</td>
+          <td><a href="#" ng-click="editStudent(student)"> Edit </a></td>
+       </tr>
+    </tbody>
+
+
+</table>
+

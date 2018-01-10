@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="script/angular.min.js"></script>
+<script type="text/javascript" src="script/rootScope.js"></script>
+</head>
+<body>
+   
+     <div ng-controller="redColorController">
+         Root Scope Colour:  {{rootRedColour }} <br/>
+          red child scope colour:  {{ redColour }} <br/>
+          Green Child scope colour:  {{ greenColour }}<br/>
+          Green Root scope Colour : {{ rootgreenColour }} <br/>
+       
+     </div>
+      <br/> <br/>
+      <div ng-controller="greenColorController">
+         Root Scope Colour:  {{rootgreenColour }} <br/>
+          green child scope colour:  {{ greenColour }} <br/>
+          red Child scope colour:  {{ redColour }} <br/>
+          red Root Scope Color: {{ rootRedColour }}
+       
+     </div>
+
+</body>
+</html>

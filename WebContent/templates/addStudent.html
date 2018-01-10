@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="routerEx">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-messages.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script type="text/javascript" src="../script/uirouter.js"></script>
+<script type="text/javascript" src="../service/editStore.js"></script>
+
+<script type="text/ng-template" id="generic-messages">
+ 				 <p ng-message="minlength"> student Name should not be too short</p>
+     	       <p ng-message="maxlength"> student Name should not be too large</p>
+     	       <p ng-message="required"> Student Name is required</p>
+
+</script>
+
+</head>
+<body>
+<form ng-submit="submitStudent()"  name="studentForm">
+   <table>
+     <tr>
+     	<td>Student Id:</td>
+     	<td><input type="number"  ng-model="form.studentId"  required="required"    /></td>
+     </tr>
+      <tr>
+     	<td>Student Name:</td>
+     	<td><input type="text"  name="studentName" ng-model="form.studentName"  ng-minlength="3" ng-maxlength="20" required="required"/></td>
+     	   <!--  <td ng-messages="studentForm.studentName.$error" ng-if="studentForm.studentName.$touched">
+     	   		 <p ng-message="minlength"> student Name should not be too short</p>
+     	       <p ng-message="maxlength"> student Name should not be too large</p>
+     	       <p ng-message="required"> Student Name is required</p>
+     	      <p ng-messages-include = "generic-messages" />
+     	    </td> -->
+     	    
+     	
+     	
+     </tr>
+      <tr>
+     	<td>Gender:</td>
+     	<td><input type="text"  ng-model="form.gender" required="required" ng-minlength="2" ng-maxlength="20"/></td>
+     </tr>
+      <tr>
+     	<td>City:</td>
+     	<td><input type="text"  ng-model="form.city" required="required" ng-minlength="2" ng-maxlength="20"/></td>
+     </tr>
+   
+   <tr>
+     <td><input type="submit" value="submit" /></td>
+   </tr>
+   
+   </table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<h1>List Of Students</h1>
+
+Name:<input type="text" ng-model="studentsCntl.name" />
+<button ng-click="studentsCntl.searchStudent()"> Search </button>
+<button ng-click="studentsCntl.addStudent()"> addStudent </button>
+
+	<ul>
+	  <li ng-repeat="student in studentsCntl.students">
+	  <!-- 	<a href="students/{{ student.studentId}}">{{ student.studentName }}</a> -->
+  	<a ui-sref="studentDetails({id:student.studentId})">{{ student.studentName }}</a>
+	  
+	  </li>
+	  
+	</ul>
+	
+	<button ng-click="studentsCntl.reloadData()"> Reload Data</button>
